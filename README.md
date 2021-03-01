@@ -49,7 +49,7 @@ new Vue({
 
 ---
 
-# [DEMO](https://schappo.github.io/demo-filters-vue-plugin/)
+# [DEMO](https://schappo.github.io/filters-vue-plugin-demo)
 
 Filtros
 
