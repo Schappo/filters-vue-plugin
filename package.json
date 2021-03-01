@@ -1,6 +1,6 @@
 {
   "name": "filters-vue-plugin",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "Filters for Vuejs plugin",
   "main": "index.js",
   "dependencies": {

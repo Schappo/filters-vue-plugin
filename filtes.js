@@ -30,10 +30,16 @@ export function data(value, format = 'DD/MM/YYYY') {
     return '--/--/----'
 }
 
+/**
+ *
+ * String é convertida pelo parseFloat. Aceita apenas string que a conversão é válida
+ */
 export function valorReal(value) {
+    if (typeof value === 'string' && value.split(',').length > 1) return 'R$ -'
+
     let valor = parseFloat(value)
 
-    if (isNaN(valor)) valor = 0
+    if (isNaN(valor)) valor = 'R$ -'
 
     return valor.toLocaleString('pt-bR', { style: 'currency', currency: 'BRL' })
 }
@@ -45,7 +51,7 @@ export function cnpj(value) {
     if (typeof value === 'string' && value.length === 14) {
         return value.replace(/^(\d{2})(\d{3})(\d{3})(\d{4})(\d{2})/, "$1.$2.$3/$4-$5")
     }
-    return 'CNPJ Inválido'
+    return '##.###.###/####-##'
 }
 
 export function cpf(value) {
@@ -55,5 +61,5 @@ export function cpf(value) {
     if (typeof value === 'string' && value.length === 11) {
         return value.replace(/^(\d{3})(\d{3})(\d{3})(\d{2})/, "$1.$2.$3-$4")
     }
-    return 'CPF Inválido'
+    return '###.###.###-##'
 }
