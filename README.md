@@ -11,6 +11,7 @@ Plugin do vuejs de filtros para dados em português (pt-br)
 ## Configuração
 
 1 - Criar pasta **plugns** dentro da pasta **src** (projeto vue/src/plugins)
+<br />
 2 - Dentro da pasta plugins criar arquivo filters.js
 
 ```javascript
